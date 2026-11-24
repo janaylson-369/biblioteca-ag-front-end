@@ -1,0 +1,341 @@
+.pagina {
+    display: flex;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.lateral {
+    position: fixed;
+    inset: 0 auto 0 0;
+    display: flex;
+    width: 16.5rem;
+    flex-direction: column;
+    padding: 1.4rem 1rem 1rem;
+    border-right: 1px solid #e2e8f0;
+    background: #fff;
+}
+
+.marca {
+    padding: 0.35rem 0.5rem 1.5rem;
+    color: #172554;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.rotuloNavegacao {
+    padding: 0.8rem 0.6rem 0.55rem;
+    color: #94a3b8;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.navegacao {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.item,
+.itemAtivo,
+.itemLink {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.65rem;
+    padding: 0.65rem 0.75rem;
+    border: 0;
+    border-radius: 0.45rem;
+    background: transparent;
+    color: #475569;
+    font: inherit;
+    font-size: 0.82rem;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.item:hover,
+.itemLink:hover {
+    background: #f1f5f9;
+    color: #172554;
+}
+
+.itemAtivo {
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+.item:focus-visible,
+.itemAtivo:focus-visible,
+.itemLink:focus-visible,
+.botaoSair:focus-visible {
+    outline: 3px solid rgba(29, 78, 216, 0.3);
+    outline-offset: 2px;
+}
+
+.perfil {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: auto;
+    padding: 1rem 0.5rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.avatar {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.dadosPerfil {
+    display: grid;
+    min-width: 0;
+    gap: 0.2rem;
+}
+
+.dadosPerfil strong {
+    overflow: hidden;
+    color: #172554;
+    font-size: 0.74rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dadosPerfil small {
+    color: #64748b;
+    font-size: 0.67rem;
+}
+
+.botaoSair {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 0.35rem 0;
+    border: 0;
+    background: transparent;
+    color: #b91c1c;
+    font: inherit;
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.areaConteudo {
+    width: calc(100% - 16.5rem);
+    min-height: 100vh;
+    margin-left: 16.5rem;
+}
+
+.topo {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: #fff;
+    color: #475569;
+    font-size: 0.82rem;
+}
+
+.seloDemo {
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+    background: #fffbeb;
+    color: #92400e;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.conteudo {
+    width: min(100% - 4rem, 72rem);
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.aviso {
+    padding: 0.9rem 1rem;
+    border: 1px solid #fcd34d;
+    border-radius: 0.6rem;
+    background: #fffbeb;
+    color: #78350f;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.sobretitulo {
+    margin-top: 2rem;
+    color: #5b21b6;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.tituloModulo {
+    margin-top: 0.35rem;
+    color: #172554;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+}
+
+.tituloModulo:focus {
+    outline: none;
+}
+
+.tituloModulo:focus-visible {
+    outline: 3px solid rgba(29, 78, 216, 0.3);
+    outline-offset: 5px;
+}
+
+.descricao {
+    margin-top: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.cartao,
+.moduloPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 13rem;
+    padding: 1.35rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.icone {
+    display: grid;
+    width: 2.8rem;
+    height: 2.8rem;
+    place-items: center;
+    border-radius: 0.7rem;
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.cartao h2,
+.moduloPlaceholder h2 {
+    margin-top: 1rem;
+    color: #172554;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+}
+
+.cartao p,
+.moduloPlaceholder p {
+    margin-top: 0.45rem;
+    color: #64748b;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.cartao a,
+.indisponivel {
+    margin-top: auto;
+    padding-top: 1.1rem;
+    color: #1d4ed8;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cartao a:hover {
+    text-decoration: underline;
+}
+
+.indisponivel {
+    color: #64748b;
+}
+
+.moduloPlaceholder {
+    min-height: 10rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 760px) {
+    .lateral {
+        width: 13.5rem;
+    }
+
+    .areaConteudo {
+        width: calc(100% - 13.5rem);
+        margin-left: 13.5rem;
+    }
+
+    .conteudo {
+        width: calc(100% - 2rem);
+    }
+
+    .topo {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.7rem 1rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .pagina {
+        display: block;
+    }
+
+    .lateral {
+        position: static;
+        width: 100%;
+        padding: 0.8rem;
+        border-right: 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .marca {
+        padding-bottom: 0.65rem;
+    }
+
+    .rotuloNavegacao {
+        padding-top: 0.45rem;
+    }
+
+    .navegacao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .perfil {
+        grid-template-columns: auto 1fr auto;
+        margin-top: 0.8rem;
+        padding-top: 0.7rem;
+    }
+
+    .botaoSair {
+        grid-column: auto;
+        justify-self: end;
+    }
+
+    .areaConteudo {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+}

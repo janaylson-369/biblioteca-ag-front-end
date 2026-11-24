@@ -1,0 +1,40 @@
+.pagina {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.introducao {
+    padding: 3.5rem 1.25rem 5rem;
+    background:
+        radial-gradient(ellipse at 82% 10%, rgba(196, 181, 253, 0.24), transparent 38%),
+        linear-gradient(120deg, #172554, #1e3a8a);
+    color: #fff;
+}
+
+.conteudoIntroducao {
+    width: min(100%, 43rem);
+    margin: 0 auto;
+}
+
+.sobretitulo {
+    margin-bottom: 0.7rem;
+    color: #ddd6fe;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.introducao h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+}
+
+.introducao p:last-child {
+    max-width: 38rem;
+    margin-top: 0.8rem;
+    color: #dbeafe;
+    font-size: 1rem;
+    line-height: 1.6;
+}

@@ -7,7 +7,7 @@ const links = [
     { label: 'Início', href: '/', rota: true },
     { label: 'Acervo Online', href: '/acervo', rota: true },
     { label: 'Categorias', href: '/categorias', rota: true },
-    { label: 'Reservas & Empréstimos', href: '#reservas' },
+    { label: 'Reservas & Empréstimos', href: '/renovacao', rota: true },
     { label: 'Espaço Cultural', href: '#espaco-cultural' },
     { label: 'Horários & Localização', href: '#horarios' },
 ]
@@ -61,9 +61,9 @@ export default function Nav() {
                                 </a>
                             )
                         })}
-                        <button type="button" className={styles.buttonEntrar}>
+                        <Link to="/login" className={styles.buttonEntrar}>
                             <User size={14} /> Área do Servidor
-                        </button>
+                        </Link>
                     </nav>
                 </div>
             </div>

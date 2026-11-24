@@ -1,0 +1,106 @@
+.painel {
+    width: min(100%, 30rem);
+    margin: -2rem auto 4rem;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid #e2e8f0;
+    border-radius: 0.9rem;
+    background: #fff;
+    box-shadow: 0 8px 26px rgba(15, 23, 42, 0.08);
+}
+
+.cabecalho h2 {
+    color: #172554;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+}
+
+.cabecalho p {
+    margin-top: 0.4rem;
+    color: #64748b;
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.avisoSeguranca {
+    margin-top: 1.25rem;
+    padding: 0.85rem 0.95rem;
+    border: 1px solid #fcd34d;
+    border-radius: 0.55rem;
+    background: #fffbeb;
+    color: #78350f;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.formulario {
+    display: grid;
+    gap: 1.1rem;
+    margin-top: 1.4rem;
+}
+
+.campo {
+    display: grid;
+    gap: 0.45rem;
+    color: #334155;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    min-height: 2.9rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.45rem;
+    color: #0f172a;
+    font: inherit;
+    font-weight: 400;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #1d4ed8;
+    outline: 3px solid rgba(29, 78, 216, 0.13);
+}
+
+.campo input::placeholder {
+    color: #94a3b8;
+}
+
+.botao {
+    min-height: 2.9rem;
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #1d4ed8;
+    color: #fff;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 160ms ease;
+}
+
+.botao:hover {
+    background: #1e40af;
+}
+
+.botao:focus-visible {
+    outline: 3px solid rgba(29, 78, 216, 0.35);
+    outline-offset: 3px;
+}
+
+.erro {
+    margin-top: 1rem;
+    color: #b91c1c;
+    font-size: 0.82rem;
+}
+
+.suporte {
+    margin-top: 1.25rem;
+    color: #64748b;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    text-align: center;
+}
