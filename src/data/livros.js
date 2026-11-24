@@ -3,12 +3,16 @@
 //   { ..., capa: capaTortoArado }
 // Sem `capa`, o card mostra um espaço branco no lugar da capa.
 
+export const categoriasCatalogo = [
+    { nome: "Literatura Brasileira", ativa: true },
+    { nome: "Infanto-Juvenil", ativa: true },
+    { nome: "História da Paraíba", ativa: true },
+    { nome: "Didáticos", ativa: true },
+]
+
 export const categorias = [
     "Todos",
-    "Literatura Brasileira",
-    "Infanto-Juvenil",
-    "História da Paraíba",
-    "Didáticos",
+    ...categoriasCatalogo.filter((categoria) => categoria.ativa).map((categoria) => categoria.nome),
 ]
 
 export const livros = [

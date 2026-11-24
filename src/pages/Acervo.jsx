@@ -18,10 +18,12 @@ export default function Acervo() {
     )
 
     const obrasAtivas = useMemo(() => livros.filter((livro) => livro.ativo !== false), [])
-    const categorias = useMemo(
-        () => [...new Set(obrasAtivas.map((livro) => livro.categoria))].sort((a, b) => a.localeCompare(b, "pt-BR")),
-        [obrasAtivas]
-    )
+    const categorias = useMemo(() => {
+        const categoriasObras = [...new Set(obrasAtivas.map((livro) => livro.categoria))]
+        const temLiteratura = categoriasObras.some((categoria) => normalizar(categoria).startsWith("literatura"))
+        const opcoes = temLiteratura ? ["Literatura", ...categoriasObras] : categoriasObras
+        return [...new Set(opcoes)].sort((a, b) => a.localeCompare(b, "pt-BR"))
+    }, [obrasAtivas])
     const obrasEncontradas = useMemo(() => {
         const termo = normalizar(busca.trim())
         const categoriaBusca = normalizar(categoriaAtiva.trim())

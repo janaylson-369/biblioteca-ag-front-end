@@ -1,0 +1,88 @@
+.pagina {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.introducao {
+    padding: 3.5rem 1.25rem 5rem;
+    background:
+        radial-gradient(ellipse at 82% 10%, rgba(196, 181, 253, 0.24), transparent 38%),
+        linear-gradient(120deg, #172554, #1e3a8a);
+    color: #fff;
+}
+
+.conteudoIntroducao {
+    width: min(100%, 73.5rem);
+    margin: 0 auto;
+}
+
+.sobretitulo {
+    margin-bottom: 0.7rem;
+    color: #ddd6fe;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.introducao h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+}
+
+.introducao p:last-child {
+    max-width: 40rem;
+    margin-top: 0.8rem;
+    color: #dbeafe;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.categorias {
+    width: min(100% - 2.5rem, 73.5rem);
+    margin: 0 auto;
+    padding: 2.5rem 0 4rem;
+}
+
+.cabecalho {
+    margin-bottom: 1.25rem;
+}
+
+.cabecalho h2 {
+    color: #172554;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.6rem;
+}
+
+.cabecalho p {
+    margin-top: 0.35rem;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.vazio {
+    padding: 3rem 1rem;
+    border: 1px dashed #cbd5e1;
+    border-radius: 0.75rem;
+    color: #64748b;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .grade {
+        grid-template-columns: 1fr;
+    }
+}

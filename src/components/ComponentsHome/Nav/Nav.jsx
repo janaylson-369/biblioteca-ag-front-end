@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router'
 const links = [
     { label: 'Início', href: '/', rota: true },
     { label: 'Acervo Online', href: '/acervo', rota: true },
-    { label: 'Categorias', href: '#categorias' },
+    { label: 'Categorias', href: '/categorias', rota: true },
     { label: 'Reservas & Empréstimos', href: '#reservas' },
     { label: 'Espaço Cultural', href: '#espaco-cultural' },
     { label: 'Horários & Localização', href: '#horarios' },
