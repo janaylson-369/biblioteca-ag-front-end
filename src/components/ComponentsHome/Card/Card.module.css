@@ -1,0 +1,147 @@
+.divCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.divCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+}
+
+/* ---------- capa ---------- */
+.divCapaLivro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15.75rem;
+    background: var(--capa-bg, #ece4d3);
+}
+
+.tan     { --capa-bg: radial-gradient(circle at 80% 20%, #f3eee2, #e6dcc6); }
+.amarelo { --capa-bg: radial-gradient(circle at 80% 20%, #f8ecb6, #f3df93); }
+.azul    { --capa-bg: radial-gradient(circle at 80% 20%, #d6e3ea, #bcd0dc); }
+.pessego { --capa-bg: radial-gradient(circle at 80% 20%, #efd5c2, #e8c3aa); }
+.azulAco { --capa-bg: radial-gradient(circle at 80% 20%, #c4d1e2, #adbed3); }
+.rosa    { --capa-bg: radial-gradient(circle at 80% 20%, #e9cbc4, #dcb3aa); }
+.verde   { --capa-bg: radial-gradient(circle at 80% 20%, #cfe6d9, #b4d4c3); }
+.areia   { --capa-bg: radial-gradient(circle at 80% 20%, #e3d5c2, #d2bfa6); }
+
+.capaLivro,
+.capaVazia {
+    width: 7.9rem;
+    height: 11.9rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 12px 20px rgba(15, 23, 42, 0.22);
+}
+
+.capaLivro {
+    object-fit: cover;
+}
+
+.capaVazia {
+    background-color: #fff;
+}
+
+/* ---------- selo de status ---------- */
+.iconDisponivel,
+.iconEmprestado {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    border: 1px solid;
+}
+
+.iconDisponivel {
+    color: #047857;
+    background-color: #ecfdf5;
+    border-color: #6ee7b7;
+}
+
+.iconEmprestado {
+    color: #b91c1c;
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+}
+
+.ponto {
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.iconDisponivel .ponto {
+    background-color: #10b981;
+}
+
+.iconEmprestado .ponto {
+    background-color: #ef4444;
+}
+
+/* ---------- informações ---------- */
+.cabecalhoLivro {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem 1.1rem 1.2rem;
+}
+
+.genero {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--roxo);
+}
+
+.tituloLivro {
+    margin-top: 0.4rem;
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--azul-titulo);
+}
+
+.autor {
+    margin-top: 0.3rem;
+    font-size: 0.72rem;
+    color: var(--texto-suave);
+}
+
+.reservar {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--azul);
+    background-color: #fff;
+    color: var(--azul);
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.reservar:hover {
+    background-color: var(--azul);
+    color: #fff;
+}

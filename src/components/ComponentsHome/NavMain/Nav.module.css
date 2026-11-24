@@ -1,0 +1,142 @@
+.nav {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 4rem 1.25rem 0;
+}
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+
+.navLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.navSubTittle {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--roxo);
+}
+
+.navTittle {
+    font-family: var(--fonte-titulo);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--azul-titulo);
+}
+
+.navDescription {
+    font-size: 0.75rem;
+    color: var(--texto-suave);
+}
+
+.navRight {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--azul);
+    white-space: nowrap;
+    transition: gap 0.2s;
+}
+
+.navRight:hover {
+    gap: 0.65rem;
+}
+
+/* ---------- filtros ---------- */
+.navBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.attribute,
+.attributeAtivo {
+    font-size: 0.68rem;
+    font-weight: 500;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--borda);
+    background-color: #fff;
+    color: #334155;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.attribute:hover {
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+.attributeAtivo {
+    background-color: var(--azul);
+    border-color: var(--azul);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ---------- toggle "Apenas disponíveis" ---------- */
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #475569;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch,
+.switchLigado {
+    position: relative;
+    width: 2.1rem;
+    height: 1.15rem;
+    border: none;
+    border-radius: 999px;
+    background-color: #cbd5e1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.switchLigado {
+    background-color: var(--azul);
+}
+
+.switchBola {
+    position: absolute;
+    top: 0.15rem;
+    left: 0.15rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s;
+}
+
+.switchLigado .switchBola {
+    transform: translateX(0.95rem);
+}
